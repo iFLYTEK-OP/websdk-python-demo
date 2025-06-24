@@ -1,1 +1,1 @@
-# PYTHON-SDK-DEMO即将更新过善，敬请关注！
+# PYTHON-SDK-DEMO 即将发布更新，敬请关注！
