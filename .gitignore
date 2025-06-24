@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.so
+*.egg
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Virtualenv
+.venv/
+venv/
+ENV/
+
+# IDE
+.idea/
+*.iml
+
+# Logs
+*.log
+
+# Poetry
+poetry.lock
+
+# Misc
+.DS_Store
+Thumbs.db 

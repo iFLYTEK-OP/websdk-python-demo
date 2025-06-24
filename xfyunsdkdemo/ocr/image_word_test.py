@@ -1,0 +1,54 @@
+"""
+Image Word OCR Client Usage Example
+营业执照识别  出租车发票识别  火车票识别  增值税发票识别  身份证识别  印刷文字识别  通用文字识别  通用文字识别（intsig）
+"""
+import json
+import logging
+import base64
+import os
+from xfyunsdkocr.image_word_client import ImageWordOCRClient, ImageWordOCREnum
+
+# 配置日志
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
+
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    raise RuntimeError(
+        'Python environment is not completely set up: required package "python-dotenv" is missing.') from None
+
+load_dotenv()
+
+
+def main():
+    # 初始化客户端
+    client = ImageWordOCRClient(
+        app_id=os.getenv('APP_ID'),  # 替换为你的应用ID
+        api_key=os.getenv('API_KEY'),  # 替换为你的API密钥
+        api_secret=os.getenv('API_SECRET'),  # 替换为你的API密钥
+        ocr_type=ImageWordOCREnum.COMMON_WORD
+    )
+
+    try:
+        # 获取识别文件路径
+        file_path = os.path.join(os.path.dirname(__file__), 'resources', 'yyzz.jpg')
+        with open(file_path, "rb") as file:
+            encoded_string = base64.b64encode(file.read())
+        # 发送请求
+        resp = client.send(encoded_string.decode("utf-8"), "jpg")
+        json_resp = json.loads(resp)
+        # logger.info(f"识别返回结果: {json_resp}")
+        if json_resp["header"]["code"] == 0:
+            text = json_resp["payload"]["result"]["text"]
+            result = base64.b64decode(text).decode("utf-8")
+            logger.info(f"解码后结果: {result}")
+        else:
+            logger.error(f"识别失败: {json_resp}")
+    except Exception as e:
+        logger.error(f"发生错误: {str(e)}")
+        raise
+
+
+if __name__ == "__main__":
+    main()
