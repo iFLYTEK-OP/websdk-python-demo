@@ -56,6 +56,9 @@
 | 文本改写                                                     | [text_rewrite_test.py](xfyunsdkdemo\nlp\text_rewrite_test.py) |
 | 视频合规                                                     | [video_moderation_test.py](xfyunsdkdemo\nlp\video_moderation_test.py) |
 | 词库操作                                                     | [wordlib_test.py](xfyunsdkdemo\nlp\wordlib_test.py)          |
+| 星火智能体                                                   | [agent_test.py](xfyunsdkdemo\spark\agent_test.py)            |
+| 超拟人交互                                                   | [oral_chat_test.py](xfyunsdkdemo\spark\oral_chat_test.py)    |
+| 通用大模型识别                                               | [llm_ocr_test.py](xfyunsdkdemo\ocr\llm_ocr_test.py)          |
 
 # 二、讯飞开放平台常用AI能力介绍与常用参数说明
 
