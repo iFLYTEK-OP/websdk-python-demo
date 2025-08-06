@@ -5,8 +5,8 @@ Sim Interp Client Usage Example
 import os
 import base64
 import json
-import uuid
 from xfyunsdknlp.sim_interp_client import SimInterpClient
+from tool.audio_player import AudioPlayer
 import logging
 
 logging.basicConfig(level=logging.INFO)
@@ -44,13 +44,18 @@ def save_audio_to_file(audio_data: bytes, filename: str = 'output.mp3') -> str:
 
 def stream():
     """非流式生成音频示例"""
+
+    # 启动扬声器
+    player = AudioPlayer()
+    player.start()
+
     try:
         # 初始化客户端
         client = SimInterpClient(
             app_id=os.getenv('APP_ID'),  # 替换为你的应用ID
             api_key=os.getenv('API_KEY'),  # 替换为你的API密钥
             api_secret=os.getenv('API_SECRET'),  # 替换为你的API密钥
-            encoding="lame"
+            # encoding="lame"
         )
         file_path = os.path.join(os.path.dirname(__file__), 'resources', 'original.pcm')
         f = open(file_path, 'rb')
@@ -103,15 +108,21 @@ def stream():
             if "tts_results" in chunk:
                 audio_chunk = base64.b64decode(chunk["tts_results"]["audio"])
                 audio_bytes.extend(audio_chunk)
+                # 流式播放
+                player.play(audio_chunk)
+
 
         # 保存音频文件
         if audio_bytes:
-            save_audio_to_file(audio_bytes, f"oral_{uuid.uuid4().hex[:8]}.mp3")
+            logger.info(f"生成音频文件大小: {len(audio_bytes)}")
+            # save_audio_to_file(audio_bytes, f"oral_{uuid.uuid4().hex[:8]}.mp3")
         else:
             logger.warning("未收到音频数据")
     except Exception as e:
         logger.error(f"生成音频失败: {str(e)}")
         raise
+    finally:
+        player.stop()
 
 
 def get_last_result(content_map):
