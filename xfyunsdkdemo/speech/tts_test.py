@@ -4,7 +4,7 @@ TTS Client Usage Example
 """
 import os
 import base64
-from xfyunsdkspeech.tts_client import TTSClient
+from xfyunsdkspeech.tts_client import TtsClient
 import logging
 
 logging.basicConfig(level=logging.INFO)
@@ -44,7 +44,7 @@ def stream():
     """流式生成音频示例"""
     try:
         # 初始化客户端
-        client = TTSClient(
+        client = TtsClient(
             app_id=os.getenv('APP_ID'),  # 替换为你的应用ID
             api_key=os.getenv('API_KEY'),  # 替换为你的API密钥
             api_secret=os.getenv('API_SECRET'),  # 替换为你的API密钥
