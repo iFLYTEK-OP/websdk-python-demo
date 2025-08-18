@@ -16,49 +16,49 @@
 
 获取到信息后填写到项目路径 .env 文件中，找到能力对应的主类运行即可。能力与主类对应说明如下：
 
-| AI能力名称                                                   | 对应主类名称                                                 |
-| ------------------------------------------------------------ | ------------------------------------------------------------ |
-| 语音听写                                                     | [iat_test.py](xfyunsdkdemo\speech\iat_test.py)               |
-| 实时语音转写                                                 | [rtasr_test.py](xfyunsdkdemo\speech\rtasr_test.py)           |
-| 音频文件语音转写                                             | [lfasr_test.py](xfyunsdkdemo\speech\lfasr_test.py)           |
-| 语音合成                                                     | [tts_test.py](xfyunsdkdemo\speech\tts_test.py)               |
-| 语音评测                                                     | [ise_test.py](xfyunsdkdemo\speech\ise_test.py)               |
-| 小牛翻译及自研机器翻译                                       | [translate_test.py](xfyunsdkdemo\nlp\translate_test.py)      |
-| 文本纠错                                                     | [text_check_test.py](xfyunsdkdemo\nlp\text_check_test.py)    |
-| 智能PPT（新）                                                | [ai_ppt_test.py](xfyunsdkdemo\spark\ai_ppt_test.py)          |
-| 静默活体检测                                                 | [anti_spoof_test.py](xfyunsdkdemo\face\anti_spoof_test.py)   |
-| 银行卡识别                                                   | [bank_card_test.py](xfyunsdkdemo\ocr\bank_card_test.py)      |
-| 名片识别                                                     | [business_card_test.py](xfyunsdkdemo\ocr\business_card_test.py) |
-| 人脸比对                                                     | [face_compare_test.py](xfyunsdkdemo\face\face_compare_test.py) |
-| 人脸检测和属性分析                                           | [face_detect_test.py](xfyunsdkdemo\face\face_detect_test.py) |
-| 配合式活体检测                                               | [face_status_test.py](xfyunsdkdemo\face\face_status_test.py) |
-| 人脸比对sensetime                                            | [face_verify_test.py](xfyunsdkdemo\face\face_verify_test.py) |
-| 指尖文字识别                                                 | [finger_ocr_test.py](xfyunsdkdemo\ocr\finger_ocr_test.py)    |
-| 印刷文字识别和手写文字识别                                   | [general_words_test.py](xfyunsdkdemo\ocr\general_words_test.py) |
-| 性别年龄识别                                                 | [igr_test.py](xfyunsdkdemo\speech\igr_test.py)               |
-| 场景识别和物体识别和场所识别                                 | [rec_ocr_test.py](xfyunsdkdemo\ocr\rec_ocr_test.py)          |
-| 图片类识别（营业执照,出租车发票,火车票,增值税发票 ,身份证,印刷文字） | [image_word_test.py](xfyunsdkdemo\ocr\image_word_test.py)    |
-| 身份证识别 营业执照识别 增值税发票识别 印刷文字识别（多语种） | [intsig_ocr_test.py](xfyunsdkdemo\ocr\intsig_ocr_test.py)    |
-| 歌曲识别                                                     | [qbh_test.py](xfyunsdkdemo\speech\qbh_test.py)               |
-| 静默活体检测sensetime                                        | [silent_detect_test.py](xfyunsdkdemo\face\silent_detect_test.py) |
-| 人脸检测和属性分析                                           | [tup_api_test.py](xfyunsdkdemo\face\tup_api_test.py)         |
-| 人脸水印照比对                                               | [watermark_verify_test.py](xfyunsdkdemo\face\watermark_verify_test.py) |
-| 超拟人合成                                                   | [oral_test.py](xfyunsdkdemo\spark\oral_test.py)              |
-| 简历生成                                                     | [resume_generate_test.py](xfyunsdkdemo\spark\resume_generate_test.py) |
-| 多语种大模型语音听写、方言大模型语音听写、中文大模型语音听写 | [spark_iat_test.py](xfyunsdkdemo\spark\spark_iat_test.py)    |
-| 一句话复刻                                                   | [voice_clone_test.py](xfyunsdkdemo\spark\voice_clone_test.py) |
-| 一句话训练                                                   | [train_test.py](xfyunsdkdemo\spark\train_test.py)            |
-| 音频合规                                                     | [audio_moderation_test.py](xfyunsdkdemo\nlp\audio_moderation_test.py) |
-| 图片合规                                                     | [image_moderation_test.py](xfyunsdkdemo\nlp\image_moderation_test.py) |
-| 同声传译                                                     | [sim_interp_test.py](xfyunsdkdemo\nlp\sim_interp_test.py)    |
-| 文本合规                                                     | [text_moderation_test.py](xfyunsdkdemo\nlp\text_moderation_test.py) |
-| 文本校对                                                     | [text_proof_test.py](xfyunsdkdemo\nlp\text_proof_test.py)    |
-| 文本改写                                                     | [text_rewrite_test.py](xfyunsdkdemo\nlp\text_rewrite_test.py) |
-| 视频合规                                                     | [video_moderation_test.py](xfyunsdkdemo\nlp\video_moderation_test.py) |
-| 词库操作                                                     | [wordlib_test.py](xfyunsdkdemo\nlp\wordlib_test.py)          |
-| 星火智能体                                                   | [agent_test.py](xfyunsdkdemo\spark\agent_test.py)            |
-| 超拟人交互                                                   | [oral_chat_test.py](xfyunsdkdemo\spark\oral_chat_test.py)    |
-| 通用大模型识别                                               | [llm_ocr_test.py](xfyunsdkdemo\ocr\llm_ocr_test.py)          |
+| AI能力名称                                                   | 对应主类名称                                                                 |
+| ------------------------------------------------------------ |------------------------------------------------------------------------|
+| 语音听写                                                     | [iat_test.py](xfyunsdkdemo/speech/iat_test.py)                         |
+| 实时语音转写                                                 | [rtasr_test.py](xfyunsdkdemo/speech/rtasr_test.py)                     |
+| 音频文件语音转写                                             | [lfasr_test.py](xfyunsdkdemo/speech/lfasr_test.py)                     |
+| 语音合成                                                     | [tts_test.py](xfyunsdkdemo/speech/tts_test.py)                         |
+| 语音评测                                                     | [ise_test.py](xfyunsdkdemo/speech/ise_test.py)                         |
+| 小牛翻译及自研机器翻译                                       | [translate_test.py](xfyunsdkdemo/nlp/translate_test.py)                |
+| 文本纠错                                                     | [text_check_test.py](xfyunsdkdemo/nlp/text_check_test.py)              |
+| 智能PPT（新）                                                | [ai_ppt_test.py](xfyunsdkdemo/spark/ai_ppt_test.py)                    |
+| 静默活体检测                                                 | [anti_spoof_test.py](xfyunsdkdemo/face/anti_spoof_test.py)             |
+| 银行卡识别                                                   | [bank_card_test.py](xfyunsdkdemo/ocr/bank_card_test.py)                |
+| 名片识别                                                     | [business_card_test.py](xfyunsdkdemo/ocr/business_card_test.py)        |
+| 人脸比对                                                     | [face_compare_test.py](xfyunsdkdemo/face/face_compare_test.py)         |
+| 人脸检测和属性分析                                           | [face_detect_test.py](xfyunsdkdemo/face/face_detect_test.py)           |
+| 配合式活体检测                                               | [face_status_test.py](xfyunsdkdemo/face/face_status_test.py)           |
+| 人脸比对sensetime                                            | [face_verify_test.py](xfyunsdkdemo/face/face_verify_test.py)           |
+| 指尖文字识别                                                 | [finger_ocr_test.py](xfyunsdkdemo/ocr/finger_ocr_test.py)              |
+| 印刷文字识别和手写文字识别                                   | [general_words_test.py](xfyunsdkdemo/ocr/general_words_test.py)        |
+| 性别年龄识别                                                 | [igr_test.py](xfyunsdkdemo/speech/igr_test.py)                         |
+| 场景识别和物体识别和场所识别                                 | [rec_ocr_test.py](xfyunsdkdemo/ocr/rec_ocr_test.py)                    |
+| 图片类识别（营业执照,出租车发票,火车票,增值税发票 ,身份证,印刷文字） | [image_word_test.py](xfyunsdkdemo/ocr/image_word_test.py)              |
+| 身份证识别 营业执照识别 增值税发票识别 印刷文字识别（多语种） | [intsig_ocr_test.py](xfyunsdkdemo/ocr/intsig_ocr_test.py)              |
+| 歌曲识别                                                     | [qbh_test.py](xfyunsdkdemo/speech/qbh_test.py)                         |
+| 静默活体检测sensetime                                        | [silent_detect_test.py](xfyunsdkdemo/face/silent_detect_test.py)       |
+| 人脸检测和属性分析                                           | [tup_api_test.py](xfyunsdkdemo/face/tup_api_test.py)                   |
+| 人脸水印照比对                                               | [watermark_verify_test.py](xfyunsdkdemo/face/watermark_verify_test.py) |
+| 超拟人合成                                                   | [oral_test.py](xfyunsdkdemo/spark/oral_test.py)                        |
+| 简历生成                                                     | [resume_generate_test.py](xfyunsdkdemo/spark/resume_generate_test.py)  |
+| 多语种大模型语音听写、方言大模型语音听写、中文大模型语音听写 | [spark_iat_test.py](xfyunsdkdemo/spark/spark_iat_test.py)              |
+| 一句话复刻                                                   | [voice_clone_test.py](xfyunsdkdemo/spark/voice_clone_test.py)          |
+| 一句话训练                                                   | [train_test.py](xfyunsdkdemo/spark/train_test.py)                      |
+| 音频合规                                                     | [audio_moderation_test.py](xfyunsdkdemo/nlp/audio_moderation_test.py)  |
+| 图片合规                                                     | [image_moderation_test.py](xfyunsdkdemo/nlp/image_moderation_test.py)  |
+| 同声传译                                                     | [sim_interp_test.py](xfyunsdkdemo/nlp/sim_interp_test.py)              |
+| 文本合规                                                     | [text_moderation_test.py](xfyunsdkdemo/nlp/text_moderation_test.py)    |
+| 文本校对                                                     | [text_proof_test.py](xfyunsdkdemo/nlp/text_proof_test.py)              |
+| 文本改写                                                     | [text_rewrite_test.py](xfyunsdkdemo/nlp/text_rewrite_test.py)          |
+| 视频合规                                                     | [video_moderation_test.py](xfyunsdkdemo/nlp/video_moderation_test.py)  |
+| 词库操作                                                     | [wordlib_test.py](xfyunsdkdemo/nlp/wordlib_test.py)                    |
+| 星火智能体                                                   | [agent_test.py](xfyunsdkdemo/spark/agent_test.py)                      |
+| 超拟人交互                                                   | [oral_chat_test.py](xfyunsdkdemo/spark/oral_chat_test.py)              |
+| 通用大模型识别                                               | [llm_ocr_test.py](xfyunsdkdemo/ocr/llm_ocr_test.py)                    |
 
 # 二、讯飞开放平台常用AI能力介绍与常用参数说明
 
