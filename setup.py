@@ -11,7 +11,7 @@ setup(
     packages=find_packages(include=["xfyunsdkdemo", "xfyunsdkdemo.*"]),
     install_requires=[
         "xfyunsdkspark>=0.0.2",
-        "xfyunsdkspeech>=0.0.2",
+        "xfyunsdkspeech>=0.0.3",
         "xfyunsdkocr>=0.0.2",
         "xfyunsdkface>=0.0.2",
         "xfyunsdknlp>=0.0.2",
