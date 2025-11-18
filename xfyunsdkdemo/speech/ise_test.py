@@ -29,13 +29,13 @@ def stream():
             api_secret=os.getenv('API_SECRET'),  # 替换为你的API密钥
             aue="raw",
             group="pupil",
-            ent="en_vip",
+            ent="cn_vip",
             category="read_sentence",
         )
-        file_path = os.path.join(os.path.dirname(__file__), 'resources/ise', 'read_sentence_en.pcm')
+        file_path = os.path.join(os.path.dirname(__file__), 'resources/ise', 'read_sentence_cn.pcm')
         f = open(file_path, 'rb')
 
-        for chunk in client.stream('\uFEFF' + "There was a gentleman live near my house", f):
+        for chunk in client.stream('\uFEFF' + "今天天气怎么样", f):
             if chunk["data"]:
                 result = str(base64.b64decode(chunk["data"]), 'utf-8')
                 logger.info(f"返回结果: {result}")
